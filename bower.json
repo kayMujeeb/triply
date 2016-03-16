@@ -1,0 +1,20 @@
+{
+  "name": "Triply",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "xtreme-khurrum-mujeeb"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/kayMujeeb/triply",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
