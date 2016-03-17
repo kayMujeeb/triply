@@ -1,0 +1,28 @@
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  margin: 0; }
+
+.flex-map-container {
+  display: -webkit-flex;
+  display: flex;
+  background: black;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%; }
+
+.trips-container {
+  width: 50%;
+  height: 50%;
+  background: green;
+  color: white;
+  opacity: 0.5; }
+
+.places-container {
+  width: 50%;
+  height: 50%;
+  background: blue;
+  color: white; }
