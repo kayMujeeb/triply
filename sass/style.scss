@@ -1,3 +1,6 @@
+$trips-container-color: #0C6A91;
+$places-container-color: #25A5C4;
+
 html {
 	height: 100%;
 }
@@ -22,8 +25,8 @@ body {
 	align-items: flex-end;
 	width: 50%;
 	height: 50%;
-	background: green;
-	opacity: 0.75;
+	background:$trips-container-color;
+	opacity: 0.85;
 
 	h1 {
 		font-family: 'Lobster', cursive;
@@ -37,7 +40,7 @@ body {
 .places-container {
 	width: 50%;
 	height: 50%;
-	background: blue;
+	background:$places-container-color;
 	color: white;
 }
 
