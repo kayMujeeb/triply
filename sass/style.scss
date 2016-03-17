@@ -8,9 +8,8 @@ body {
 }
 
 .flex-map-container {
-	display: -webkit-flex;
 	display: flex;
-	background: black;
+	background-image: url("../assets/mocks/mock_map.png");
 	flex-direction: column;
 	align-items: flex-end;
 	height: 100%;
@@ -18,11 +17,21 @@ body {
 }
 
 .trips-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 	width: 50%;
 	height: 50%;
 	background: green;
-	color: white;
-	opacity: 0.5;
+	opacity: 0.75;
+
+	h1 {
+		font-family: 'Lobster', cursive;
+		color: yellow;
+		opacity: 1;
+		padding-right: 1rem;
+
+	}
 }
 
 .places-container {
