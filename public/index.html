@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <!-- Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
@@ -28,6 +29,19 @@
 	<div class="flex-map-container">
 		<div class="trips-container">
 			<h1>Triply</h1>
+			<form action="" method="GET" class="SearchBox">
+			  <div class="Field Field--is-search">
+			    <input 
+			      type="search"
+			      name="search"
+			      placeholder="Place"
+			      class="SearchBox-query"/>
+
+			    <button
+			      type="submit"
+			      class="Btn SearchBox-submitBtn">Search</button>
+			  </div>
+			</form>
 		</div>
 		<div class="places-container">
 		</div>
