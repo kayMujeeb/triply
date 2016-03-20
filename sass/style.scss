@@ -1,5 +1,6 @@
 $trips-container-color: #0C6A91;
 $places-container-color: #25A5C4;
+$search-box-bg-color: #FF4B00;
 
 html {
 	height: 100%;
@@ -24,21 +25,27 @@ body {
 }
 
 .trips-container {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
 	width: 50%;
 	height: 50%;
 	background:$trips-container-color;
 	opacity: 0.85;
+}
 
-	h1 {
-		font-family: 'Lobster', cursive;
-		color: yellow;
-		opacity: 1;
-		padding-right: 1rem;
+.logo-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
 
-	}
+  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    color: yellow;
+    opacity: 1;
+    padding-right: 1rem;
+
+  }
+
 }
 
 .places-container {
@@ -90,8 +97,8 @@ button,
 
 /* VISUAL DESIGN DETAILS */
 .SearchBox {
-  margin: 3rem auto 0;
-  max-width: 80%;
+  margin: 1.5rem auto 0;
+  max-width: 65%;
 }
 
 .Field--is-search:before {
@@ -121,7 +128,7 @@ button,
 
 .SearchBox-submitBtn {
   border-radius: 0 2px 2px 0;
-  background: #9792E3;
+  background: $search-box-bg-color;
   font-weight: 300;
   text-transform: uppercase;
   color: #EDFFEC;

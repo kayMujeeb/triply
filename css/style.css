@@ -17,15 +17,19 @@ body {
   width: 100%; }
 
 .trips-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
   width: 50%;
   height: 50%;
   background: #0C6A91;
   opacity: 0.85; }
-  .trips-container h1 {
+
+.logo-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%; }
+  .logo-container h1 {
     font-family: 'Lobster', cursive;
+    font-size: 2em;
     color: yellow;
     opacity: 1;
     padding-right: 1rem; }
@@ -65,8 +69,8 @@ button,
 
 /* VISUAL DESIGN DETAILS */
 .SearchBox {
-  margin: 3rem auto 0;
-  max-width: 80%; }
+  margin: 1.5rem auto 0;
+  max-width: 65%; }
 
 .Field--is-search:before {
   border-radius: 2px 0 0 2px;
@@ -88,7 +92,7 @@ button,
 
 .SearchBox-submitBtn {
   border-radius: 0 2px 2px 0;
-  background: #9792E3;
+  background: #FF4B00;
   font-weight: 300;
   text-transform: uppercase;
   color: #EDFFEC; }
