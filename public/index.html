@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<html class"no-js" ng-app="Triply">
+<html class"no-js" ng-app="triply">
 <head>
 	    <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -13,41 +13,54 @@
 
         <!-- Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-        <!-- Google Maps API 
-   		<script src="https://maps.googleapis.com/maps/api/js?key=[API_KEY]"></script>-->
+        <!--Google Maps API --> 
+   		<script src="https://maps.googleapis.com/maps/api/js?key="></script>
         <!-- Modernizr -->
     	<script src="../bower_components/modernizr/bin/modernizr"></script>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<!-- JS Source -->
-	    <script src="../bower_components/jquery/jquery.js"></script>
+	    <script src="../bower_components/jquery/dist/jquery.js"></script>
 	    <script src="../bower_components/angular/angular.js"></script>
 	    <script src="../bower_components/angular-route/angular-route.js"></script>
 	    <script src="../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
+
+	     <!-- Angular Scripts -->
+	    <script src="js/gservice.js"></script>
+	    <script src="js/addCtrl.js"></script>
+	    <script src="js/app.js"></script>
 </head>
 
-<body>
-	<div class="flex-map-container">
-		<div class="trips-container">
-			<div class="logo-container">
-				<h1>Triply</h1>
-			</div>
-			<form action="" method="GET" class="SearchBox" novalidate>
-			  <div class="Field Field--is-search">
-			    <input 
-			      type="search"
-			      name="search"
-			      placeholder="Place"
-			      class="SearchBox-query"/>
+<body ng-controller="addCtrl">
+	<div class="app-flex-container">
+		<div class="map-container">
+			<div id="map"></div>
+		</div>
 
-			    <button
-			      type="submit"
-			      class="Btn SearchBox-submitBtn">Add</button>
-			  </div>
-			</form>
+		<div class="function-flex-container">
+
+			<div class="trips-container">
+				<div class="logo-container">
+					<h1>Triply</h1>
+				</div>
+				<form action="" method="GET" class="SearchBox" novalidate>
+				  <div class="Field Field--is-search">
+				    <input 
+				      type="search"
+				      name="search"
+				      placeholder="Place"
+				      class="SearchBox-query"/>
+
+				    <button
+				      type="submit"
+				      class="Btn SearchBox-submitBtn"
+				      ng-click="createUser()" 
+				      ng-disabled="addForm.$invalid">Add</button>
+					</div>
+				</form>
+			</div>
+			<div class="places-container">
+			</div>
 		</div>
-		<div class="places-container">
-		</div>
-	</div>
 
 	</div>
 

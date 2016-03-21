@@ -18,21 +18,48 @@ body {
 /* =============================================================================
   Containers
 ============================================================================= */
+#map {
+	width: 100%;
+	height: 100%;
+	//align-self: flex-start;
+}
 
-.flex-map-container {
+
+
+
+/* =============================================================================
+  Containers
+============================================================================= */
+
+.app-flex-container {
 	display: flex;
-	background-image: url("../assets/mocks/mock_map.png");
-	flex-direction: column;
-	align-items: flex-end;
+	//background-image: url("../assets/mocks/mock_map.png");
 	height: 100%;
 	width: 100%;
 }
 
+.map-container {
+	width: 100%;
+	height: 100%;
+	align-self: flex-start;
+}
+
+.function-flex-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	width: 100%;
+	height: 100%;
+}
+
+
 .trips-container {
-	width: 50%;
-	height: 50%;
+	width: 100%;
+	height: 100%;
 	background:$trips-container-color;
-  @include boxShadow;
+  	@include boxShadow;
+  	;
+
 }
 
 .logo-container {
@@ -52,11 +79,11 @@ body {
 }
 
 .places-container {
-	width: 50%;
-	height: 50%;
+	width: 100%;
+	height: 100%;
 	background:$places-container-color;
 	color: white;
-  @include boxShadow;
+  	@include boxShadow;
 }
 
 /* =============================================================================
