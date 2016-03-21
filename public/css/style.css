@@ -61,7 +61,7 @@ button,
 
 .Field--is-search:before {
   flex: 0 0 2.75em;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center; }
 

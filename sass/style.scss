@@ -88,7 +88,7 @@ button,
   flex: 0 0 2.75em;
 
   // Use flexbox to center the icon
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
