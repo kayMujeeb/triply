@@ -19,8 +19,7 @@ body {
 .trips-container {
   width: 50%;
   height: 50%;
-  background: #0C6A91;
-  opacity: 0.85; }
+  background: rgba(12, 106, 145, 0.85); }
 
 .logo-container {
   display: inline-flex;
@@ -31,7 +30,6 @@ body {
     font-family: 'Lobster', cursive;
     font-size: 2em;
     color: yellow;
-    opacity: 1;
     padding-right: 1rem; }
 
 .places-container {
@@ -69,7 +67,7 @@ button,
 
 /* VISUAL DESIGN DETAILS */
 .SearchBox {
-  margin: 1.5rem auto 0;
+  margin: 1rem auto 0;
   max-width: 65%; }
 
 .Field--is-search:before {
@@ -92,7 +90,7 @@ button,
 
 .SearchBox-submitBtn {
   border-radius: 0 2px 2px 0;
-  background: #FF4B00;
+  background: #85d80c;
   font-weight: 300;
   text-transform: uppercase;
   color: #EDFFEC; }
