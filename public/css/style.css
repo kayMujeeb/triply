@@ -19,7 +19,8 @@ body {
 .trips-container {
   width: 50%;
   height: 50%;
-  background: rgba(12, 106, 145, 0.85); }
+  background: rgba(12, 106, 145, 0.85);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5), 0px 2px 4px 0px rgba(0, 0, 0, 0.5); }
 
 .logo-container {
   display: inline-flex;
@@ -36,7 +37,8 @@ body {
   width: 50%;
   height: 50%;
   background: #25A5C4;
-  color: white; }
+  color: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5), 0px 2px 4px 0px rgba(0, 0, 0, 0.5); }
 
 /* =============================================================================
   Search Box
