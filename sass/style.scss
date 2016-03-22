@@ -35,7 +35,6 @@ body {
 
 .app-flex-container {
 	display: flex;
-	//background-image: url("../assets/mocks/mock_map.png");
 	height: 100%;
 	width: 100%;
 }
@@ -52,16 +51,16 @@ body {
 	align-items: flex-end;
 	width: 100%;
 	height: 100%;
-	@include boxShadow;
+  background: url("../assets/mocks/mock_map.png") no-repeat;
+  background-size:cover;
+  @include boxShadow;
 
 }
-
 
 .trips-container {
 	width: 100%;
 	height: 100%;
 	background:$trips-container-color;
-
 }
 
 .logo-container {
