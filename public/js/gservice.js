@@ -110,23 +110,32 @@ var initialize = function(latitude, longitude) {
         map.setMapTypeId('map_style');
     }
 
+    var input = /** @type {HTMLInputElement} */(
+      document.getElementById('place-input'));
+
+    // Create the autocomplete helper, and associate it with
+    // an HTML text input box.
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.bindTo('bounds', map);
+
+    
     // Loop through each location in the array and place a marker
-    locations.forEach(function(n, i){
-        var marker = new google.maps.Marker({
-            position: n.latlon,
-            map: map,
-            title: "Big Map",
-            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
-        });
+    // locations.forEach(function(n, i){
+    //     var marker = new google.maps.Marker({
+    //         position: n.latlon,
+    //         map: map,
+    //         title: "Big Map",
+    //         icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+    //     });
 
-        // For each marker created, add a listener that checks for clicks
-        google.maps.event.addListener(marker, 'click', function(e){
+    //     // For each marker created, add a listener that checks for clicks
+    //     google.maps.event.addListener(marker, 'click', function(e){
 
-            // When clicked, open the selected marker's message
-            currentSelectedMarker = n;
-            n.message.open(map, marker);
-        });
-    });
+    //         // When clicked, open the selected marker's message
+    //         currentSelectedMarker = n;
+    //         n.message.open(map, marker);
+    //     });
+    // });
 
     // Set initial location as a bouncing red marker
     var initialLocation = new google.maps.LatLng(latitude, longitude);

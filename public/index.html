@@ -14,7 +14,7 @@
         <!-- Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
         <!--Google Maps API --> 
-   		<script src="https://maps.googleapis.com/maps/api/js?key="></script>
+   		<script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places"></script>
         <!-- Modernizr -->
     	<script src="../bower_components/modernizr/bin/modernizr"></script>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -42,9 +42,10 @@
 				<div class="logo-container">
 					<h1>Triply</h1>
 				</div>
-				<form action="" method="GET" class="SearchBox" novalidate>
+				<form class="SearchBox" novalidate>
 				  <div class="Field Field--is-search">
 				    <input 
+				      id="place-input"
 				      type="search"
 				      name="search"
 				      placeholder="Place"

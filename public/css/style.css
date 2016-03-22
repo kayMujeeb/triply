@@ -59,6 +59,21 @@ body {
   color: white; }
 
 /* =============================================================================
+  Google Places Autocorrect
+============================================================================= */
+.pac-container {
+  background: #9BC86C;
+  opacity: 0.75; }
+
+.pac-container:after {
+  /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
+  background-image: none !important;
+  height: 0px; }
+
+.pac-item {
+  color: white; }
+
+/* =============================================================================
   Search Box
 ============================================================================= */
 input,
