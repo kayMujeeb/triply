@@ -54,7 +54,7 @@ body {
 
 .places-container {
   width: 100%;
-  height: 100%;
+  height: 80%;
   background: #25A5C4;
   color: white; }
 
@@ -62,16 +62,16 @@ body {
   Google Places Autocorrect
 ============================================================================= */
 .pac-container {
-  background: #9BC86C;
+  background: #85d80c;
   opacity: 0.75; }
-
-.pac-container:after {
-  /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
-  background-image: none !important;
-  height: 0px; }
+  .pac-container:after {
+    /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
+    background-image: none !important;
+    height: 0px; }
 
 .pac-item {
-  color: white; }
+  color: white;
+  border-top: 1px solid rgba(12, 106, 145, 0.85); }
 
 /* =============================================================================
   Search Box

@@ -22,8 +22,6 @@ body {
 #map {
 	width: 100%;
 	height: 100%;
-
-	//align-self: flex-start;
 }
 
 
@@ -81,7 +79,7 @@ body {
 
 .places-container {
 	width: 100%;
-	height: 100%;
+	height: 80%;
 	background:$places-container-color;
 	color: white;
 }
@@ -91,18 +89,23 @@ body {
   Google Places Autocorrect
 ============================================================================= */
 .pac-container {
-	background: #9BC86C;
+	background: $search-box-bg-color;
 	opacity: 0.75;
-}
 
-.pac-container:after {
+  &:after {
     /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
     background-image: none !important;
     height: 0px;
+  }
 }
 
 .pac-item {
 	color: white;
+  border-top:1px solid $trips-container-color;
+}
+
+.pac-icon {
+  //background-image:url("../assets/icons/pac-icon.png") !important;
 }
 
 
