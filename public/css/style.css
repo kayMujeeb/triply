@@ -110,15 +110,6 @@ button,
   margin: 1rem auto 0;
   max-width: 65%; }
 
-.Field--is-search:before {
-  border-radius: 2px 0 0 2px;
-  background: #ccc;
-  font-family: 'FontAwesome';
-  font-weight: normal;
-  font-style: normal;
-  color: #797979;
-  content: "\f00e"; }
-
 .SearchBox-query {
   background: #e9e9e9;
   overflow: hidden;
