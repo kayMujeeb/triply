@@ -1,6 +1,6 @@
 $trips-container-color: rgba(12,106,145,0.85);
 $places-container-color: #25A5C4;
-$search-box-bg-color: rgb(133, 216, 12);
+$search-box-bg-color: rgb(133, 216, 12); //#85d80c
 
 @mixin boxShadow {
   box-shadow: -7.5px 0px 5px -3px rgba(0,0,0,0.45);
@@ -17,15 +17,12 @@ body {
 }
 
 /* =============================================================================
-  Containers
+  Map Container
 ============================================================================= */
 #map {
 	width: 100%;
 	height: 100%;
 }
-
-
-
 
 /* =============================================================================
   Containers
@@ -76,7 +73,6 @@ body {
   }
 
 }
-
 .places-container {
 	width: 100%;
 	height: 80%;
@@ -100,14 +96,20 @@ body {
 }
 
 .pac-item {
-	color: white;
+  color: #0000FF;
+  font-family: 'Didact Gothic', sans-serif;
   border-top:1px solid $trips-container-color;
 }
 
-.pac-icon {
-  //background-image:url("../assets/icons/pac-icon.png") !important;
+.pac-item-query {
+  //color: white;
 }
 
+.pac-icon {
+  // Color has been set on the svg file
+  background-image:url("../assets/icons/gpin.svg") !important;
+  background-size: cover;
+}
 
 /* =============================================================================
   Search Box

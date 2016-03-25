@@ -6,7 +6,7 @@ body {
   margin: 0; }
 
 /* =============================================================================
-  Containers
+  Map Container
 ============================================================================= */
 #map {
   width: 100%;
@@ -70,8 +70,13 @@ body {
     height: 0px; }
 
 .pac-item {
-  color: white;
+  color: #0000FF;
+  font-family: 'Didact Gothic', sans-serif;
   border-top: 1px solid rgba(12, 106, 145, 0.85); }
+
+.pac-icon {
+  background-image: url("../assets/icons/gpin.svg") !important;
+  background-size: cover; }
 
 /* =============================================================================
   Search Box
