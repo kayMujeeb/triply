@@ -93,7 +93,7 @@ var initialize = function(latitude, longitude) {
     // Create a map object, and include the MapTypeId to add
     // to the map type control.
     var mapOptions = {
-        zoom: 11,
+        zoom: 3,
         center: myLatLng,
         mapTypeControlOptions: {
         mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
@@ -118,7 +118,33 @@ var initialize = function(latitude, longitude) {
     var autocomplete = new google.maps.places.Autocomplete(input);
     autocomplete.bindTo('bounds', map);
 
-    
+    var marker = new google.maps.Marker({
+        map: map
+    });
+
+    // Get the full place details when the user selects a place from the
+    // list of suggestions.
+    google.maps.event.addListener(autocomplete, 'place_changed', function() {
+        var place = autocomplete.getPlace();
+        if (!place.geometry) {
+          return;
+        }
+
+        if (place.geometry.viewport) {
+          map.fitBounds(place.geometry.viewport);
+        } else {
+          map.setCenter(place.geometry.location);
+          map.setZoom(16);
+        }
+
+        // Set the position of the marker using the place ID and location.
+        marker.setPlace(/** @type {!google.maps.Place} */ ({
+          placeId: place.place_id,
+          location: place.geometry.location
+        }));
+        marker.setVisible(true);
+
+      });
     // Loop through each location in the array and place a marker
     // locations.forEach(function(n, i){
     //     var marker = new google.maps.Marker({
@@ -137,15 +163,15 @@ var initialize = function(latitude, longitude) {
     //     });
     // });
 
-    // Set initial location as a bouncing red marker
-    var initialLocation = new google.maps.LatLng(latitude, longitude);
-    var marker = new google.maps.Marker({
-        position: initialLocation,
-        animation: google.maps.Animation.BOUNCE,
-        map: map,
-        icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
-    });
-    lastMarker = marker;
+    // // Set initial location as a bouncing red marker
+    // var initialLocation = new google.maps.LatLng(latitude, longitude);
+    // var marker = new google.maps.Marker({
+    //     position: initialLocation,
+    //     animation: google.maps.Animation.BOUNCE,
+    //     map: map,
+    //     icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+    // });
+    // lastMarker = marker;
 
 };
 
