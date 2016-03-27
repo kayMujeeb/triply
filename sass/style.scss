@@ -93,12 +93,20 @@ body {
     background-image: none !important;
     height: 0px;
   }
+
+  :hover {
+    background: yellow;
+  }
 }
 
 .pac-item {
-  color: #0000FF;
-  font-family: 'Didact Gothic', sans-serif;
+  color: #052B7C;
+  font-family: 'Hind Siliguri', sans-serif;
   border-top:1px solid $trips-container-color;
+}
+
+.pac-item-selected {
+  background: yellow;
 }
 
 .pac-item-query {
