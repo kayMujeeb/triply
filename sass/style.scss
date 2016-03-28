@@ -73,11 +73,17 @@ body {
   }
 
 }
-.places-container {
+#places-container {
 	width: 100%;
 	height: 80%;
 	background:$places-container-color;
 	color: white;
+
+  img {
+    width: 100%;
+    height: 35%;
+    object-fit: cover;
+  }
 }
 
 

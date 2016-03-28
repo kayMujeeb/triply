@@ -52,11 +52,15 @@ body {
     color: yellow;
     padding-right: 1rem; }
 
-.places-container {
+#places-container {
   width: 100%;
   height: 80%;
   background: #25A5C4;
   color: white; }
+  #places-container img {
+    width: 100%;
+    height: 35%;
+    object-fit: cover; }
 
 /* =============================================================================
   Google Places Autocorrect

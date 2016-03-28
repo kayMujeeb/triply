@@ -70,11 +70,23 @@ angular.module('gservice', [])
                     gender: user.gender,
                     age: user.age,
                     favlang: user.favlang
-            });
+                });
+            }
+            // location is now an array populated with records in Google Maps format
+            return locations;
+        };
+
+        var addPhoto = function (place) {
+            var photos = place.photos;
+                if (!photos) {
+                     return;
+                }
+
+                else {
+                var photosURL = '<img src=' + place.photos[0].getUrl({'maxWidth': 1000, 'maxHeight': 1000}) +'">'
+                $("#places-container").prepend(photosURL);
+                }
         }
-        // location is now an array populated with records in Google Maps format
-        return locations;
-     };
 
 // Initializes the map
 var initialize = function(latitude, longitude) {
@@ -116,12 +128,16 @@ var initialize = function(latitude, longitude) {
     // Create the autocomplete helper, and associate it with
     // an HTML text input box.
     var autocomplete = new google.maps.places.Autocomplete(input);
-    autocomplete.bindTo('bounds', map);
+    //autocomplete.bindTo('bounds', map);
 
     var marker = new google.maps.Marker({
         map: map
     });
 
+    var places = new google.maps.places
+          .PlacesService(document.getElementById('places-container')
+                         .appendChild(document.createElement('div')));
+   
     // Get the full place details when the user selects a place from the
     // list of suggestions.
     google.maps.event.addListener(autocomplete, 'place_changed', function() {
@@ -134,7 +150,7 @@ var initialize = function(latitude, longitude) {
           map.fitBounds(place.geometry.viewport);
         } else {
           map.setCenter(place.geometry.location);
-          map.setZoom(16);
+          map.setZoom(17);
         }
 
         // Set the position of the marker using the place ID and location.
@@ -143,6 +159,13 @@ var initialize = function(latitude, longitude) {
           location: place.geometry.location
         }));
         marker.setVisible(true);
+
+        $("#places-container").html('<div><strong>' + place.name + '</strong><br>' +
+          'Place ID: ' + place.place_id + '<br>' +
+          place.formatted_address + '</div>');
+
+        // Handles cases when no pictures are returned
+        addPhoto(place);
 
       });
     // Loop through each location in the array and place a marker
