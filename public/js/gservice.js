@@ -128,7 +128,7 @@ var initialize = function(latitude, longitude) {
     // Create the autocomplete helper, and associate it with
     // an HTML text input box.
     var autocomplete = new google.maps.places.Autocomplete(input);
-    //autocomplete.bindTo('bounds', map);
+    autocomplete.bindTo('bounds', map);
 
     var marker = new google.maps.Marker({
         map: map
@@ -160,9 +160,10 @@ var initialize = function(latitude, longitude) {
         }));
         marker.setVisible(true);
 
-        $("#places-container").html('<div><strong>' + place.name + '</strong><br>' +
-          'Place ID: ' + place.place_id + '<br>' +
-          place.formatted_address + '</div>');
+        $("#places-container").html('<div><h1>' + place.name + '</h1><h3>'
+            + place.types[0] + '</h3><h2>'
+            + place.formatted_address + '</h2><h2>'
+            + 'Rating: ' + place.rating + '</h2></div>');
 
         // Handles cases when no pictures are returned
         addPhoto(place);
