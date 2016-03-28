@@ -76,6 +76,7 @@ body {
     font-size: 1em;
     order: 4; }
   #places-container h1, #places-container h2, #places-container h3 {
+    font-family: 'Dosis', sans-serif;
     margin-top: 0.5rem;
     margin-bottom: 0.25em;
     padding-left: 1rem;
