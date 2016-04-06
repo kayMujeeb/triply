@@ -1,3 +1,12 @@
+/* =============================================================================
+  Variables
+============================================================================= */
+/* =============================================================================
+  Mixins *sigh*
+============================================================================= */
+/* =============================================================================
+  HTML+Body
+============================================================================= */
 html {
   height: 100%; }
 
@@ -81,6 +90,43 @@ body {
     margin-bottom: 0.25em;
     padding-left: 1rem;
     line-height: 1em; }
+
+/* =============================================================================
+  Places list
+============================================================================= */
+#places-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 65%;
+  margin: 1rem auto 0; }
+  #places-list .place-item {
+    flex: 2 0 1rem;
+    font-family: 'Poiret One', cursive;
+    color: white;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-size: 1.2em; }
+    @media (min-width: 410px) {
+      #places-list .place-item {
+        max-width: calc(50% - 10px); } }
+    @media (min-width: 620px) {
+      #places-list .place-item {
+        max-width: calc(33.33333% - 10px); } }
+    @media (min-width: 830px) {
+      #places-list .place-item {
+        max-width: calc(25% - 10px); } }
+    @media (min-width: 1040px) {
+      #places-list .place-item {
+        max-width: calc(20% - 10px); } }
+    @media (min-width: 1250px) {
+      #places-list .place-item {
+        max-width: calc(16.66667% - 10px); } }
+    @media (min-width: 1460px) {
+      #places-list .place-item {
+        max-width: calc(14.28571% - 10px); } }
+    @media (min-width: 1670px) {
+      #places-list .place-item {
+        min-width: calc(12.5% - 10px); } }
 
 /* =============================================================================
   Google Places Autocorrect
