@@ -142,7 +142,7 @@ body {
 		margin-top: 2rem;
 		margin-left: 2rem;
 		font-size: 1.2em;
-		
+
 		@media (min-width: 410px) {
 		  
 		    max-width: calc(50% - 10px);
@@ -187,7 +187,7 @@ body {
 ============================================================================= */
 .pac-container {
 	background: $search-box-bg-color;
-	opacity: 0.75;
+	opacity: 0.95;
 
   &:after {
     /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */

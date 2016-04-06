@@ -76,6 +76,21 @@ angular.module('gservice', [])
             return locations;
         };
 
+        var displayPlace = function (place) {
+
+            // Add place details on the places-container
+            $("#places-container").html('<div><h1>' + place.name + '</h1><h3>'
+            + place.types[0] + '</h3><h2>'
+            + place.formatted_address + '</h2><h2>'
+            + 'Rating: ' + place.rating + '</h2></div>');
+
+            // Add place name to the places-list
+            var placeName = '<div class="place-item">' + place.name + '</div>';
+            $("#places-list").append (placeName)
+
+
+        }
+
         var addPhoto = function (place) {
             var photos = place.photos;
                 if (!photos) {
@@ -160,10 +175,8 @@ var initialize = function(latitude, longitude) {
         }));
         marker.setVisible(true);
 
-        $("#places-container").html('<div><h1>' + place.name + '</h1><h3>'
-            + place.types[0] + '</h3><h2>'
-            + place.formatted_address + '</h2><h2>'
-            + 'Rating: ' + place.rating + '</h2></div>');
+        // Displays place details on the app
+        displayPlace (place);
 
         // Handles cases when no pictures are returned
         addPhoto(place);

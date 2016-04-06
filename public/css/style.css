@@ -133,7 +133,7 @@ body {
 ============================================================================= */
 .pac-container {
   background: #85d80c;
-  opacity: 0.75; }
+  opacity: 0.95; }
   .pac-container:after {
     /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
     background-image: none !important;
