@@ -134,51 +134,16 @@ body {
 	flex-wrap: wrap;
 	max-width: 65%;
 	margin: 1rem auto 0;
+  justify-content: space-between;
 	
 	.place-item {
-		flex: 2 0 1rem;
+		flex: 2 0 0.75rem;
 		font-family: 'Poiret One', cursive;
 		color: white;
-		margin-top: 2rem;
-		margin-left: 2rem;
-		font-size: 1.2em;
-
-		@media (min-width: 410px) {
-		  
-		    max-width: calc(50% - 10px);
-		  
-		}
-		@media (min-width: 620px) {
-		  
-		    max-width: calc(33.33333% - 10px);
-		  
-		}
-		@media (min-width: 830px) {
-		  
-		    max-width: calc(25% - 10px);
-		  
-		}
-		@media (min-width: 1040px) {
-		  
-		    max-width: calc(20% - 10px);
-		  
-		}
-		@media (min-width: 1250px) {
-		  
-		    max-width: calc(16.66667% - 10px);
-		  
-		}
-		@media (min-width: 1460px) {
-		  
-		    max-width: calc(14.28571% - 10px);
-		  
-		}
-		@media (min-width: 1670px) {
-		  
-		    min-width: calc(12.5% - 10px);
-		  
-		}
-	}
+    //max-width: 6em;
+    width: 32%;
+    margin: 1%;
+  }
 
 }
 
